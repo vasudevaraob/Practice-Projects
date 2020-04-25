@@ -14,7 +14,7 @@ public class App
     {
     	Customer c1 = new Customer();
     	c1.setEmpid(2);
-    	c1.setEmpname("Ram");
+    	c1.setEmpname("Ram"); 
     	    	
         //System.out.println( "Hello World!" );
     	EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu");
