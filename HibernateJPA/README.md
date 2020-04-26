@@ -47,6 +47,3 @@ Configurations:-
 
 3.need to add anotations @Cachable and @Cache
 
-
-
-
