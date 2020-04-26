@@ -9,7 +9,7 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
-@Table
+@Table 
 @Cacheable
 @Cache(usage=CacheConcurrencyStrategy.READ_ONLY)
 public class Agent {
