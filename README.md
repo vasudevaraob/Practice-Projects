@@ -126,3 +126,16 @@ select rollno from <b>Stuent<b>;
 
 
 
+<h2>Object States </h2>
+
+1.	Transent - cretion of object and doing moification called Transent state</br>
+2.	Persistence - hile performing any save or any operation on Transent object , can called Persest state </br>
+			-get(),save(),persist().
+3.	detached state -  detached() </br>
+		when deleting(remove()) from db or  closing the session all comes under detache state.
+		
+<h2>Hibernate Get vs load</h2> </br>
+
+Get by default get all the data from chaild objects also, But in load is based on load on demand. will provide a proxy object all the times
+		
+		
