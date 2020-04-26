@@ -40,3 +40,11 @@ RelationShip:-
 Lazy Loading & Eager Loading:- just add fetch=FetchType.Eager"
 
 @OneToMany(mappedBy="ObjectName",fetch=FetchType.EAGER)
+
+Hibernate Caching:-
+
+Level1:- this is for particular session, if changing the session will not work.
+
+Level2:-ehCache, tird party libs
+
+
