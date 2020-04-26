@@ -1,4 +1,4 @@
-package in.vasudev.HibernateJPA;
+package in.vasudev.jpa;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
