@@ -47,3 +47,18 @@ Configurations:-
 
 3.need to add anotations @Cachable and @Cache
 
+<h2>HQL<h2></br>
+	
+<b>Ex:-</b></br>
+
+in sql "select * form table_name;" and  in HQL "from table_name" like this
+
+select rollno from <b>stuent<b>; (sql)
+
+select rollno from <b>Stuent<b>;
+	
+
+<h2>Get&Load<h1>
+
+
+
