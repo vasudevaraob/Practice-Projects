@@ -16,3 +16,4 @@ cross:-https://spring.io/guides/gs/rest-service-cors/
 
 https://howtodoinjava.com/spring5/webmvc/spring-mvc-cors-configuration/
 
+https://alligator.io/react/axios-react/
