@@ -32,7 +32,7 @@ public class ConditionalControlStatementsDemo {
  */
 		int i = 5;
 		int j = 0;
-		j= i>6?10:9;
+		j= i>6 ? 10 : 9;
 		System.out.println(j);
 		
 		/*

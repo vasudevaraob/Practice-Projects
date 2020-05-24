@@ -42,7 +42,7 @@ public class IterationStatementsDemo {
 		do {
 			System.out.println("Do while");
 			j++;
-		} while (j <= 5);
+		} while (j > 5);
 		
 
 		/*

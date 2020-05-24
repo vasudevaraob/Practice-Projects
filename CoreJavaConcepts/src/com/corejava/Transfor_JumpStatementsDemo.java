@@ -18,7 +18,6 @@ public class Transfor_JumpStatementsDemo {
 		for (int a = 0; a < 10; a++) {
 
 			if (a == 7) {
-
 				continue;
 			}
 			System.out.println("Example for continue   "+a);
