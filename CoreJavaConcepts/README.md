@@ -66,9 +66,9 @@
 <h4>Iterating Statements</h4>
 
 	* for loop - when we know number of iteration
-	* While Loop - when we dont know aout number of iteration (chat windo, when user press exit   will do chating)
+	* While Loop - when we dont know aout number of iteration (chat window, when user press exit   will do chat)
 	* Do While - when we need to execute first statement go for condition 
-	* for each Loop - Array will discuss on this
+	* for each Loop - Array will discuss on this for(int i:arr){}
 	* Nested Loop (Logical patterns)
 
 <h4>Transfer Statements</h4>
@@ -94,6 +94,8 @@
 	
 	1. Default  Constructor
 	2. Parameter constructor
+***Constructor execution should be starts from parent to child***
+
 
 *Restrictions for the static method*
 
@@ -158,20 +160,35 @@
 	
 ##Arrays:
 
-
-
+	Array is a collection of similar type of elements int [] a ;
 	
+	1. Single Dimensional Array int [] a = {}
+	2. Multidimensional Array   int [][] b = {{1,2,3},{4,5,6},{7,8,9}}
+	3. Jagged Array
 
-		 
-	
-		
-	
-	
+###### VarArgs  (int ... n)--> having Good example in code
 
+###### Super() -- Good example with explination
+
+###### This Key word Having Good example
+
+	this can be used to refer current class instance variable
+	this can be used to invoke current class method (implicitly)
+	this() can be used to invoke current class constructor
+	this can be passed as an argument in the method call.
+	this can be passed as argument in the constructor call.
+	this can be used to return the current class instance from the method.
+
+####### Inheritance And Abstract class (Multiple Inheritance)
+	JAVA does not support multiple inheritance
+
+####### Method Overriding & Dynamic Method Dispatch Having Good example
+
+	by having IS-A relation ship can achieve, when ever we no need to parent class execution go for this. 
+ 
+###### Encapselation - Binding data with methods called
+
+we need to keep our data to be save 
 
 String
-
-
-
- 
 

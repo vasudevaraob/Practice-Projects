@@ -2,7 +2,7 @@ package com.corejava;
 
 /*
  * Inner Classes
- * 		Member class - with out static key wor
+ * 		Member class - with out static key word
  * 	    Static class -
  *      Anonymous class
  */
@@ -37,10 +37,6 @@ public class InnerDemo {
 	//methods
 	
 	public static void main(String[] args) {
-		
-		Outer obj = new Outer();
-		
-		obj.show();
 		
 		Outer.Inner obj1 = new Outer.Inner();
 		obj1.display();
