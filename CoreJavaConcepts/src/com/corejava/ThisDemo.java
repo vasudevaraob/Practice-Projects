@@ -5,11 +5,11 @@ class Sutdentclass{
 	int rollno;
 	String name;
 	public Sutdentclass(int rollno, String name) {
-		/*super();
+		super();
 		this.rollno = rollno;
-		this.name = name;*/
-		rollno = rollno;
-		name = name;
+		this.name = name;
+		//rollno = rollno;
+		//name = name;
 		
 	}
 	void display() {
