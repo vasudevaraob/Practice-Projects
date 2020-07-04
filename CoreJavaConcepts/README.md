@@ -339,12 +339,91 @@ The Exception Handling in Java is one of the powerful mechanism to handle the ru
 	1.Types of Java Exceptions
 There are mainly two types of exceptions: checked and unchecked. Here, an error is considered as the unchecked exception. According to Oracle, there are three types of exceptions:
 
-			1.Checked Exception (if class implements Throle is called Ex.IOExcep,SQLExcep)
+			1.Checked Exception (if class inherit Throble is called Ex.IOExcep,SQLExcep)
 			
 			2.Unchecked Exception(if class inherit RuntimeException EX ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException)
 			
 			3.Error( is irrecoverable e.g. OutOfMemoryError, VirtualMachineError, AssertionError)
+------------------>
+	1.try which will cause the exception need to keep in this block
+	2.catch is to catch the exception
+	3.Finally is use to must and should e executed  (Finally block in java can be used to put "cleanup" code such as closing a file, closing connection)
+	
+	Java throw keyword:-
+	
+	  The Java throw keyword is used to explicitly throw an exception.We can throw either checked or uncheked exception in java by throw keyword. The throw keyword is mainly used to throw custom exception
+	  
+	Difference between throw and throws in Java
+There are many differences between throw and throws keywords. A list of differences between throw and throws are given below:
 
-			
+No.	throw	                                                        throws
+1)	Java throw keyword is used to explicitly throw an exception.	Java throws keyword is used to declare an exception.
+2)	Checked exception cannot be propagated using throw only.	    Checked exception can be propagated with throws.
+3)	Throw is followed by an instance.	                            Throws is followed by class.
+4)	Throw is used within the method.	                            Throws is used with the method signature.
+5)	You cannot throw multiple exceptions.	                        You can declare multiple exceptions e.g.
+                                                                    public void method()throws IOException,SQLException.
+	
+######Multithreading in Java
+
+	Multithreading
+	Multitasking
+	Process-based multitasking
+	Thread-based multitasking
+	What is Thread
+	Multithreading in Java is a process of executing multiple threads simultaneously
+	
+	Advantages of Java Multithreading
+1) It doesn't block the user because threads are independent and you can perform multiple operations at the same time.
+
+2) You can perform many operations together, so it saves time.
+
+3) Threads are independent, so it doesn't affect other threads if an exception occurs in a single thread.
+
+	Java Thread class
+	
+	Java provides Thread class to achieve thread programming. Thread class provides constructors and methods to create and perform operations on a thread. Thread class extends Object class and implements Runnable interface.	
+
+	
+	How to create thread
+	
+	There are two ways to create a thread:
+
+	1.	By extending Thread class(Thread class:
+Thread class provide constructors and methods to create and perform operations on a thread.Thread class extends Object class and implements Runnable interface.)
+	
+	2. By implementing Runnable interface.(
+The Runnable interface should be implemented by any class whose instances are intended to be executed by a thread. Runnable interface have only one method named run().
+public void run(): is used to perform action for a thread)	
 				
-				
+	Java Garbage Collection
+	
+	In java, garbage means unreferenced objects.
+
+Garbage Collection is process of reclaiming the runtime unused memory automatically. In other words, it is a way to destroy the unused objects
+
+	Advantage of Garbage Collection
+It makes java memory efficient because garbage collector removes the unreferenced objects from heap memory.
+It is automatically done by the garbage collector(a part of JVM) so we don't need to make extra efforts.
+
+	How can an object be unreferenced?
+There are many ways:
+
+By nulling the reference
+
+Employee e=new Employee();  
+e=null;
+
+By assigning a reference to another
+
+Employee e1=new Employee();  
+Employee e2=new Employee();  
+e1=e2;
+
+By anonymous object etc. new Employee();
+
+	finalize() method
+The finalize() method is invoked each time before the object is garbage collected. This method can be used to perform cleanup processing. This method is defined in Object class as:
+
+	gc() method
+The gc() method is used to invoke the garbage collector to perform cleanup processing. The gc() is found in System and Runtime classes.
