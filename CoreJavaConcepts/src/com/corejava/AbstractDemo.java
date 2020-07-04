@@ -5,7 +5,7 @@ abstract class Human {
 	abstract void walk();
 
 	void eat() {
-
+  
 	}
 
 }
