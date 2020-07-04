@@ -20,6 +20,7 @@ class Student{
 	
 }
 
+
 public class AppTest {
 
 	
@@ -28,7 +29,7 @@ public class AppTest {
 		int n=10;
 		
 		if (n==2) {
-			
+			// just a unused statement
 			System.out.println("with in if");
 		} else
 			if (n==10) {
