@@ -2,7 +2,7 @@ package com.corejava.thread;
 
 public class TestGarbage1 {
 	public void finalize() {
-		System.out.println("object is garbage collected");
+		System.out.println("object is garbage collected");  
 	}
 
 	public static void main(String args[]) {
