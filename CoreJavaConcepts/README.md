@@ -212,6 +212,34 @@ we need to keep our data to be save
 	
 	-> if method contains declaration only with Abstract key word is called
 	-> when we want to a method to be implemented by different programmers whith different implementation
+	An abstract class must be declared with an abstract keyword.
+	It can have abstract and non-abstract methods.
+	It cannot be instantiated.
+	It can have constructors and static methods also.
+	It can have final methods which will force the subclass not to change the body of the method.
+
+####### Final KeyWord:-
+
+	-> to define constants, hen e don't want to change the value
+	-> when we don't want to extend my class go for final	
+	-> when don't want to override my method go with final
+
+###### Interface
+
+	Why use Java interface?
+	It is used to achieve abstraction.
+	By interface, we can support the functionality of multiple inheritance.
+	It can be used to achieve loose coupling.
+	
+	Multiple inheritance is not supported through class in java, but it is possible by an interface, why?
+	
+	Normal interface
+	SAM Single abstract method interface - functional interface ()
+	Maraer interface - serilizale clonale it will give instrections
+	
+	What is marker or tagged interface?
+	An interface which has no member is known as a marker or tagged interface, for example, 	Serializable, Cloneable, Remote, etc. They are used to provide some essential information to the 	JVM so that JVM may perform some useful operation.
+	Since Java 8, interface can have default and static methods which is discussed later.
 	
 
 String
