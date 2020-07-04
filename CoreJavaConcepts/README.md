@@ -16,6 +16,10 @@
 	8. double data type
  
 	Byte & Char -> Int -> long -> float -> double
+	
+	Non-Primitive Data Types: These data types are not actually defined by the programming language but are created by the programmer. They are also called “reference variables” or “object references” since they reference a memory location which stores the data.Non-Primitive Data Types: These data types are not actually defined by the programming language but are created by the programmer. They are also called “reference variables” or “object references” since they reference a memory location which stores the data.
+	
+	Non-Primitive data types refer to objects and hence they are called reference types. Examples of non-primitive types include Strings, Arrays, Classes, Interface, etc. Below image depicts various non-primitive data types.
 
 
 ## 2. Variables  (Instance variables,Local Variables,Static variables)
@@ -128,12 +132,16 @@
 			2. Multiple Level inheritance
 		 
 	2. Encapsulation
-		 - Process of binding variables and methods into single entity	 Using
+		 - Process of binding variables and methods into single entity	 Using(We can create a fully 			encapsulated class in Java by making all the data members of the class private. Now we can 			use setter and getter methods to set and get the data in it.)
 		 - isolate the members from one class to other class
 		 - We can implement the Abstraction and data hiding/Data Binding
 	3. Polymorphism
 		 - A single entity will show multiple behaviour
 		 - Can achieve flexibility
+		 
+		 There are two ways to overload the method in java
+          By changing number of arguments
+          By changing the data type
 		 
 		 	1. Compile Time polymorphism/OverLoading/Static Binding/Early Binding
 		 	2. Run Time polymorphism/OverRidding/Dynamic Binding/Lazy Binding
@@ -240,7 +248,103 @@ we need to keep our data to be save
 	What is marker or tagged interface?
 	An interface which has no member is known as a marker or tagged interface, for example, 	Serializable, Cloneable, Remote, etc. They are used to provide some essential information to the 	JVM so that JVM may perform some useful operation.
 	Since Java 8, interface can have default and static methods which is discussed later.
+
+######Package
+
+		A java package is a group of similar types of classes, interfaces and sub-packages.Package in java can be categorized in two form, built-in package and user-defined package.here are many built-in packages such as java, lang, awt, javax, swing, net, io, util, sql etc.
+		
+######Access Modifiers in Java  (Access modifiers & non Access modifier)
+	1.	Private: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
+	2. Default: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+	3. Protected: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
+	4.	Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
+	
+	There are many non-access modifiers, such as static, abstract, synchronized, native, volatile, transient, etc. Here, we are going to learn the access modifiers only.
+		
+
+######String
+
+	1. What is String in java
+			Generally, String is a sequence of characters. But in Java, string is an object that represents a sequence of characters. The java.lang.String class is used to create a string object.
+			
+	2. How to create a string object?
+			There are two ways to create String object:
+				A. By string literal Strig A = "Hello";
+				B. By new keyword String s = new String("Hello");
+	3. Immutable String in Java
+			In java, string objects are immutable. Immutable simply means unmodifiable or unchangeable.
+			Once string object is created its data or state can't be changed but a new string object is 			created.
+	4. Why string objects are immutable in java?
+			Because java uses the concept of string literal.Suppose there are 5 reference variables,all 		referes to one object "sachin".If one reference variable changes the value of the object, it 		will be affected to all the reference variables. That is why string objects are immutable in ja
+######Java StringBuffer class
+
+	Java StringBuffer class is used to create mutable (modifiable) string. The StringBuffer class in java is same as String class except it is mutable i.e. it can be changed.
+
+######Java StringBuilder class
+	
+	Java StringBuilder class is used to create mutable (modifiable) string. The Java StringBuilder class is same as StringBuffer class except that it is non-synchronized. It is available since JDK 1.5.
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+	1. String Compare (equals(),==,compareTo()) 
+	
+	String compare by compareTo() method
+		The String compareTo() method compares values lexicographically and returns an integer value 		that describes if first string is less than, equal to or greater than second string.
+
+			Suppose s1 and s2 are two string variables. If:
+				s1 == s2 :0
+				s1 > s2   :positive value
+				s1 < s2   :negative value
+				
+	2. String Concatenation in Java
+			In java, string concatenation forms a new string that is the combination of multiple strings. 		There are two ways to concat string in java:
+				1. By + (string concatenation) operator
+				2. By concat() method
+	3. Substring in Java
+
+   			1. public String substring(int startIndex): This method returns new String object containing the substring of the given      string from specified startIndex (inclusive).
+   			2. public String substring(int startIndex, int endIndex): This method returns new String object containing the substring of the given string from specified startIndex to endIndex.
+   			
+	4. How to create Immutable class?
+		we have created a final class named Employee. It have one final datamember, a parameterized constructor and getter method.
+		
+	5.StringTokenizer in Java (The java.util.StringTokenizer class allows you to break a string into tokens. It is simple way to break string.)
 	
 
-String
 
+
+######Arrays in Java
+
+	Normally, an array is a collection of similar type of elements which has contiguous memory location.
+	1.Advantages
+		Code Optimization: It makes the code optimized, we can retrieve or sort the data efficiently.
+		Random access: We can get any data located at an index position.
+	2.Disadvantages
+		Size Limit: We can store only the fixed size of elements in the array. It doesn't grow its size 		at runtime. To solve this problem, collection framework is used in Java which grows 		automatically.
+		
+	3.Types of Array in java
+
+		Single Dimensional Array (dataType arr[])
+		Multidimensional Array(dataType arrayRefVar[][])
+		
+
+######Exception Handling
+
+The Exception Handling in Java is one of the powerful mechanism to handle the runtime errors so that normal flow of the application can be maintained. (Exception is an abnormal condition.)
+				1.Checked exceptions
+				2.Unchecked exceptions (Error)
+	->Exception Handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException, SQLException, RemoteException.
+
+	1.Types of Java Exceptions
+There are mainly two types of exceptions: checked and unchecked. Here, an error is considered as the unchecked exception. According to Oracle, there are three types of exceptions:
+
+			1.Checked Exception (if class implements Throle is called Ex.IOExcep,SQLExcep)
+			
+			2.Unchecked Exception(if class inherit RuntimeException EX ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException)
+			
+			3.Error( is irrecoverable e.g. OutOfMemoryError, VirtualMachineError, AssertionError)
+
+			
+				
+				
