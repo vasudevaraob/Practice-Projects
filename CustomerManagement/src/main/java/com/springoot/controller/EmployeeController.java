@@ -22,6 +22,11 @@ import com.springoot.entity.Employee;
 import com.springoot.exception.ResourceNotFoundException;
 import com.springoot.repo.EmployeeRepository;
 
+/**
+ * 
+ * @author RASHITHA
+ *
+ */
 
 @RestController
 @RequestMapping("/api/v1")
@@ -34,6 +39,13 @@ public class EmployeeController {
 	public List<Employee> getAllEmployees() {
 		return employeeRepository.findAll();
 	}
+	
+	/**
+	 * 
+	 * @param employeeId
+	 * @return
+	 * @throws ResourceNotFoundException
+	 */
 
 	@GetMapping("/employees/{id}")
 	public ResponseEntity<Employee> getEmployeeById(@PathVariable(value = "id") Long employeeId)
@@ -42,12 +54,18 @@ public class EmployeeController {
 				.orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + employeeId));
 		return ResponseEntity.ok().body(employee);
 	}
-
+	
+	/**
+	 * 
+	 * @param employee
+	 * @return
+	 */
 	@PostMapping("/employees")
 	public Employee createEmployee(@Valid @RequestBody Employee employee) {
 		return employeeRepository.save(employee);
 	}
-
+	
+	
 	@PutMapping("/employees/{id}")
 	public ResponseEntity<Employee> updateEmployee(@PathVariable(value = "id") Long employeeId,
 			@Valid @RequestBody Employee employeeDetails) throws ResourceNotFoundException {
